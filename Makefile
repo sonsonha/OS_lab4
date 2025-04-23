@@ -19,3 +19,6 @@ bktpool: bktpool.c bktpool.h
 clean:
 	rm *.o
 	rm mypool
+
+forkjoin: forkjoin.c
+	gcc -o forkjoin forkjoin.c
