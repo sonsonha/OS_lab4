@@ -34,11 +34,6 @@ This repository contains two examples:
    Make 
 ```
 
-### 4. Run in thread mode
-``` bash
-   ./mypool
-```
-
 ## Switching to fork() mode
 
 ### 1. Edit bkwrk.c and comment out:
