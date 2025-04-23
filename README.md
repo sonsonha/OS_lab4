@@ -23,4 +23,57 @@ This repository contains two examples:
 
 ### 1. Clone or enter the project directory
 ```bash
-cd ~/lab_4
+   cd ~/lab_4
+```
+### 2. Clean the previous builds
+``` bash
+   Make clean
+```
+### 3. Build the pool (thread mode)
+``` bash
+   Make 
+```
+
+### 4. Run in thread mode
+``` bash
+   ./mypool
+```
+
+## Switching to fork() mode
+
+### 1. Edit bkwrk.c and comment out:
+```bash
+   //#define WORK_THREAD
+```
+### 2. Rebuild:
+``` bash
+   make clean
+   make
+```
+### 3. Run again:
+``` bash
+   ./mypool
+```
+
+### 4. Run in thread mode
+``` bash
+   ./mypool
+```
+
+## Fork–Join Demo
+
+### 1. Build:
+```bash
+   gcc -o forkjoin forkjoin.c
+```
+### 2. Run:
+``` bash
+   ./forkjoin
+```
+## CLeanup
+``` bash
+   make clean
+   rm -f forkjoin
+```
+
+
