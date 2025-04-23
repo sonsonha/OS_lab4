@@ -1,36 +1,26 @@
-# OS_lab4
+# BK Task-Pool & Fork–Join Demo
 
-BK Task-Pool Quick Guide
+This repository contains two examples:
 
-Build
-make clean    # remove old objects (use -f in Makefile to avoid errors)
-make           # compiles `mypool` and `forkjoin`
-Test BK Task-Pool (Thread Mode)
-./mypool
+1. **BK Task-Pool** (Practice 3.1 + Problems 1–2)  
+   A simple multi-task framework that spawns up to `MAX_WORKER` workers (threads or processes), enqueues tasks, schedules them in FIFO order, and dispatches them via `SIGUSR1`.
 
-Expect 10 “got worker” lines
+2. **Fork–Join Demo** (Problem 3)  
+   A standalone program showing a classic “fork N children → do work → parent waits (join)” pattern.
 
-Exactly 3 Assign tsk X wrk Y and 3 Task func - Hello from ...
+---
 
-Test BK Task-Pool (Fork Mode)
+## Prerequisites
 
-In bkwrk.c comment out #define WORK_THREAD.
+- Linux or WSL  
+- `gcc` (with `clone()` support)  
+- `make`  
+- `pthread` library  
 
-Rebuild: make clean && make
+---
 
-Run: ./mypool (same correct output)
+## BK Task-Pool
 
-Uncomment #define STRESS_TEST in main.c.
-
-Rebuild & run:
-
-make clean && make
-./mypool
-
-Verify 15 Assign tsk… and 15 Task func… lines.
-
-Fork–Join Demo (Problem 3)
-
-./forkjoin
-
-Children print start/finish; parent prints join messages.
+### 1. Clone or enter the project directory
+```bash
+cd ~/lab_4
