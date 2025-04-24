@@ -50,10 +50,9 @@ This repository contains two examples:
    ./mypool
 ```
 
-### 4. Run in thread mode
-``` bash
-   ./mypool
-```
+
+
+
 
 ## Fork–Join Demo
 
